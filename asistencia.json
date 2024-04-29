@@ -1,0 +1,26 @@
+[
+  {
+    "fecha": "26/04/2024",
+    "semestre": "2024-1",
+    "codigo": "eg-2",
+    "seccion": "1",
+    "rut": "1-1",
+    "asistencia": "1"
+  },
+  {
+    "fecha": "26/04/2024",
+    "semestre": "2024-1",
+    "codigo": "eg-2",
+    "seccion": "1",
+    "rut": "2-2",
+    "asistencia": "0"
+  },
+  {
+    "fecha": "26/04/2024",
+    "semestre": "2024-1",
+    "codigo": "eg-2",
+    "seccion": "1",
+    "rut": "3-3",
+    "asistencia": "1"
+  }
+]

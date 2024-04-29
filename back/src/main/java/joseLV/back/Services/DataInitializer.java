@@ -1,7 +1,6 @@
 package joseLV.back.Services;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.persistence.EntityManager;
 import joseLV.back.Entities.*;
 import joseLV.back.Repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +21,6 @@ public class DataInitializer {
     private CursoRepository cursoRepository;
     @Autowired
     private InscripcionRepository inscripcionRepository;
-    @Autowired
-    private AsistenciaRepository asistenciaRepository;
-    @Autowired
-    private EvaluacionRepository evaluacionRepository;
 
     @PostConstruct
     public void initData() {
@@ -80,7 +75,7 @@ public class DataInitializer {
                     inscripcionNueva.getCurso().setId((long) i);
                     inscripcionNueva.setEstudiante(new EstudianteEntity());
                     inscripcionNueva.getEstudiante().setId((long) j);
-                    inscripcionNueva.setSemestre(20241);
+                    inscripcionNueva.setSemestre("2024-1");
                     inscripcionRepository.save(inscripcionNueva);
                 }
             }

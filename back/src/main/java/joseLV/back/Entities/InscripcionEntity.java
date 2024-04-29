@@ -4,12 +4,14 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Table(name = "inscripcion")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class InscripcionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,5 +26,5 @@ public class InscripcionEntity {
     @JoinColumn(name = "curso_id")
     private CursoEntity curso;
 
-    private Integer semestre;
+    private String semestre;
 }

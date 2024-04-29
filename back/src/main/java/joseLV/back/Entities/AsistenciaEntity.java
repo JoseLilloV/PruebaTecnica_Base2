@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.Date;
 
@@ -11,6 +12,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class AsistenciaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
