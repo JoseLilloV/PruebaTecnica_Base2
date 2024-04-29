@@ -16,15 +16,9 @@ public class AsistenciaEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "alumno_id")
-    private AlumnoEntity alumno;
-
-    @ManyToOne
-    @JoinColumn(name = "curso_id")
-    private CursoEntity curso;
-
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "inscripcion_id", referencedColumnName = "id")
+    private InscripcionEntity inscripcion;
     private Date fecha;
     private Boolean asistencia;
 

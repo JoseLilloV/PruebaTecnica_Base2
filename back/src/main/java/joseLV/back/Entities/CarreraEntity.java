@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class CarreraEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,10 +21,16 @@ public class CarreraEntity {
     private Long id;
     private String nombre;
 
-
     @OneToMany(mappedBy = "carrera",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
     private List<AsignaturaEntity> asignaturas;
+
+    @OneToMany(mappedBy = "carrera",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
+    private List<EstudianteEntity> estudiantes;
+
+
 
 }

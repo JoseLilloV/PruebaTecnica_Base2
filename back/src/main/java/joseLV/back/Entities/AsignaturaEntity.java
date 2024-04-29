@@ -23,10 +23,9 @@ public class AsignaturaEntity {
 
     private String codigo;
     private String nombre;
-
-    @OneToMany(mappedBy = "asignatura",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY,
+            mappedBy = "asignatura",
+            cascade = CascadeType.ALL)
     private List<CursoEntity> cursos;
 
     @ManyToOne(fetch = FetchType.LAZY)

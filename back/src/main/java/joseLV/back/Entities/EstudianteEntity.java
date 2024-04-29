@@ -4,13 +4,15 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
-@Table(name= "alumno")
+@Table(name= "estudiante")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AlumnoEntity {
+@ToString
+public class EstudianteEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
@@ -21,8 +23,8 @@ public class AlumnoEntity {
     private String apellido_paterno;
     private String apellido_materno;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "carrera_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "carrera_id")
     private CarreraEntity carrera;
 
 

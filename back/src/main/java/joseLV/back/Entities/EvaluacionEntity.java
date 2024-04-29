@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "nota")
+@Table(name = "evaluacion")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,8 +21,8 @@ public class EvaluacionEntity {
     private float nota;
 
     @ManyToOne
-    @JoinColumn(name = "alumno_id")
-    private AlumnoEntity alumno;
+    @JoinColumn(name = "estudiante_id")
+    private EstudianteEntity estudiante;
 
     @ManyToOne
     @JoinColumn(name = "curso_id")
