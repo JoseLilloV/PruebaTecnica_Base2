@@ -23,12 +23,7 @@ public class AsignaturaEntity {
 
     private String codigo;
     private String nombre;
-    @OneToMany(fetch = FetchType.LAZY,
-            mappedBy = "asignatura",
-            cascade = CascadeType.ALL)
-    private List<CursoEntity> cursos;
-
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "carrera_id")
     private CarreraEntity carrera;
 

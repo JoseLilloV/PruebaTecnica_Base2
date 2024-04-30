@@ -21,15 +21,6 @@ public class CarreraEntity {
     private Long id;
     private String nombre;
 
-    @OneToMany(mappedBy = "carrera",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY)
-    private List<AsignaturaEntity> asignaturas;
-
-    @OneToMany(mappedBy = "carrera",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY)
-    private List<EstudianteEntity> estudiantes;
 
 
 

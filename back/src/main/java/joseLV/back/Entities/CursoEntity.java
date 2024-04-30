@@ -21,7 +21,7 @@ public class CursoEntity {
     private Integer seccion;
     private String horario;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "asignatura_id")
     private AsignaturaEntity asignatura;
 

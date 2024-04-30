@@ -23,7 +23,9 @@ public class EstudianteEntity {
     private String apellido_paterno;
     private String apellido_materno;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    //private Long carrera_id;
+
+    @ManyToOne
     @JoinColumn(name = "carrera_id")
     private CarreraEntity carrera;
 
