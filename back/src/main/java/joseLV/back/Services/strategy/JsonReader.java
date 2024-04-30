@@ -24,13 +24,13 @@ public class JsonReader implements ReaderStrategy{
             SimpleDateFormat formato=new SimpleDateFormat("dd/MM/yyyy");
 
             String content = stream;
-            final Gson gson = new Gson();
+           // final Gson gson = new Gson();
             JsonParser parser = new JsonParser();
             JsonArray gsonArr = parser.parse(content).getAsJsonArray();
 
             for (JsonElement obj : gsonArr) {
                 JsonObject gsonObj = obj.getAsJsonObject();
-                System.out.println(gsonObj);
+                //System.out.println(gsonObj);
 
                 AsistenciaEntity asistenciaTemp = new AsistenciaEntity();
                 asistenciaTemp.setFecha(formato.parse(gsonObj.get("fecha").getAsString()));

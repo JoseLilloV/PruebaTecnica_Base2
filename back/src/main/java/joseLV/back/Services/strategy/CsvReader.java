@@ -38,7 +38,7 @@ public class CsvReader implements ReaderStrategy{
                             Optional<InscripcionEntity> inscripcionTemp = inscripcionService.findActiveByEstudianteIdAndCursoIdAndSemestre(estudianteTemp.get().getId(), cursoTemp.get().getId(), registro[1]);
                             if(inscripcionTemp.isPresent()) {
                                 asistenciaTemp.setInscripcion(inscripcionTemp.get());
-                                if (registro[5].equals("1")) {
+                                if (registro[5].charAt(0) == '1') {
                                     asistenciaTemp.setAsistencia(Boolean.TRUE);
                                 } else {
                                     asistenciaTemp.setAsistencia(Boolean.FALSE);
