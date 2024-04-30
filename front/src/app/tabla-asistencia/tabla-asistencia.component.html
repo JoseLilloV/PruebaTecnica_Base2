@@ -1,0 +1,28 @@
+<table cclass="table">
+    <thead>
+        <tr>
+        <th scope="col">Fecha</th>
+        <th scope="col">Nombre Estudiante</th>
+        <th scope="col">RUT Estudiante</th>
+        <th scope="col">Nombre Asignatura</th>
+        <th scope="col">Sección</th>
+        <th scope="col">Asistencia</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+        @for (registro of asistencias; track registro.id){
+          <tr>
+
+            <td>{{ formatDate(registro.fecha) }}</td>
+            <td>{{registro.inscripcion.estudiante.nombres +' '+ registro.inscripcion.estudiante.apellido_paterno + ' ' +registro.inscripcion.estudiante.apellido_materno}}</td>
+            <td>{{registro.inscripcion.estudiante.rut }}</td>
+            <td>{{registro.inscripcion.curso.asignatura.nombre}}</td>
+            <td>{{registro.inscripcion.curso.seccion}} </td>
+            <td> {{ registro.asistencia ? 'Presente' : 'Ausente' }} </td>
+            <br>
+          </tr>
+        }
+    </tbody>
+  </table>
+  

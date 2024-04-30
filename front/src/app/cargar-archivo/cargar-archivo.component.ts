@@ -14,7 +14,7 @@ export class CargarArchivoComponent {
   fileContent: string = '';
   fileName: string = '';
 
-  constructor(private asistenciaService: AsistenciaService) { } // Inyecta el servicio
+  constructor(private asistenciaService: AsistenciaService) { } 
 
   onFileSelected(event: any) {
     const file: File = event.target.files[0];

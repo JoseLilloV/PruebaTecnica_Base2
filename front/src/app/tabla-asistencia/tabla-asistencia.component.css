@@ -1,0 +1,35 @@
+/* spacing */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid #4cafaa;
+    float: left; 
+  }
+ 
+  
+  th,
+  td {
+    border-collapse: collapse;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+  }
+
+  thead,
+  tfoot {
+    color: rgb(237, 233, 233);
+    
+  }
+  
+  thead th,
+  tfoot th,
+  tfoot td {
+    background: linear-gradient(
+      to bottom,
+      rgb(76, 175, 170),
+      rgb(3, 105, 100)
+    );
+  }
+  
+
+  

@@ -17,6 +17,10 @@ export class AsistenciaService {
     return this.http.post<any>(`${this.baseUrl}Asistencia/CargarArchivo`, {stream: stream, nombre: nombreArchivo})
   }
 
+  ObtenerTodaAsistencia(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}Asistencia/GetAll`)
+  }
+
   //getData(): Observable<any> {
     //return this.http.get<any>(`${this.baseUrl}/data`); // Endpoint de la API en tu backend
   //}
