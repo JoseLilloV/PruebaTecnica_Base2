@@ -5,6 +5,9 @@ import joseLV.back.Repositories.AsistenciaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Iterator;
+import java.util.List;
+
 @Service
 public class AsistenciaService {
     @Autowired
@@ -13,4 +16,6 @@ public class AsistenciaService {
     public AsistenciaEntity guardar(AsistenciaEntity registro ){
         return asistenciaRepository.save(registro);
     }
+
+    public Iterable<AsistenciaEntity> getAll(){ return asistenciaRepository.findAll();}
 }
