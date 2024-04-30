@@ -1,0 +1,37 @@
+.custom-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
+     width: 100%; 
+}
+
+.custom-card mat-card-header {
+    background-color: #4cafaa; 
+    color: white; 
+    justify-content: center;
+}
+
+.custom-card mat-card-content {
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%; 
+    padding: 20px; 
+}
+.custom-card mat-card-actions  {
+    display: flex;
+    justify-content: center;
+}
+.custom-button { 
+    background-color: #4cafaa; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+.custom-button:hover {
+    background-color: #340dc3;
+}
