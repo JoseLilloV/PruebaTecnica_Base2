@@ -3,7 +3,7 @@
 El problema a tratar es una plataforma que aministra notas y asistencia en contexto educativo.
 
 Se incluye un diagrama de clase que modela las entidades del backend y la base de datos.
-
+Se incluye un diagrama de secuencia general que muestra  el funcionamiento  de las funciones implementadas.
 
 ## Pre Requisitos
 
@@ -42,7 +42,6 @@ Ahi simplemente se puede dar *Run*  para correr todas las pruebas.
 
 Se incluyen pruebas unitarias para los componentes desarrollados. Para ejecutarlo solo se escribe el siguiente comando en consola, recuerde que es necesario tener instalado el navegador Google Chrome en el sistema
 
-
 ```
 ng test
 ```
@@ -50,7 +49,7 @@ ng test
 ## Ejecutar Backend
 
 Para ejecutar el projecto se debe ir al main  y correr la clase principal
-el documento principal se encuentra en la ruta: 
+el documento principal se encuentra en la ruta:
 
 PruebaTecnica_Base2\back\src\main\java\joseLV\back
 
