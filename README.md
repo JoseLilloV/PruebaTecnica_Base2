@@ -64,3 +64,9 @@ Para ejecutar el proyecto se debe escribir el siguiente comando en consola, el p
 ```
 ng serve
 ```
+
+## Funcionalidad
+
+La solución admite dos tipo de formato para cargar la asistencia desde un archivo (json y csv), los archivos ejemplos estan en la raiz del repositos (asistecia.json y  asistencia.txt respectivamente), esto se leen mediante el patron de diseño strategy, para que en caso de haber  otro formato poder incluirlo facilmente en la solución.
+
+Las lista de asistencia se ven en una tabla al lado del boton de carga, incluye un boton para actualizar dicha tabla, revisar diagrama de secuencia de secuencia para ver el detalle del flujo esperado de la solución
